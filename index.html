@@ -38,8 +38,7 @@
     #for-not-for{background:var(--bg-mid)}
     .for-grid{display:grid;grid-template-columns:1fr 1fr;gap:4rem;margin-top:3rem}
     .for-col ul{list-style:none;display:flex;flex-direction:column;gap:.9rem}
-    .for-col ul li{color:var(--text-secondary);padding-left:1.25rem;position:relative;font-size:.96rem;line-height:1.6}
-    .for-col ul li::before{content:'--';position:absolute;left:0;color:var(--accent-dim)}
+    .for-col ul li{color:var(--text-secondary);padding-left:1.25rem;position:relative;font-size:.96rem;line-height:1.6}.for-col ul li::before{content:'—';position:absolute;left:0;color:var(--accent-dim)}
     .for-col.not ul li{color:var(--text-dim)}
     .for-col.not ul li::before{color:var(--border-light)}
     .for-col.not h3{color:var(--text-dim)}
@@ -57,8 +56,7 @@
     .audit-inner h2{margin:1.25rem 0}
     .audit-inner>p{margin-bottom:.85rem}
     .audit-takeaways{list-style:none;margin:1.75rem 0 2.25rem;display:flex;flex-direction:column;gap:.7rem}
-    .audit-takeaways li{color:var(--text-secondary);padding-left:1.4rem;position:relative;font-size:.94rem}
-    .audit-takeaways li::before{content:'v';position:absolute;left:0;color:var(--accent);font-size:.78rem;line-height:1.8}
+    .audit-takeaways li{color:var(--text-secondary);padding-left:1.4rem;position:relative;font-size:.94rem}.audit-takeaways li::before{content:'✓';position:absolute;left:0;color:var(--accent);font-size:.78rem;line-height:1.8}
     .audit-note{margin-top:1.75rem!important;font-style:italic;font-size:.88rem!important;color:var(--text-dim)!important}
     .next-steps{display:flex;flex-direction:column;margin-top:3rem;max-width:540px}
     .next-step{display:grid;grid-template-columns:2.5rem 1fr;gap:0 1rem;padding:1.6rem 0;border-bottom:1px solid var(--border)}
@@ -87,150 +85,87 @@
     .reveal:nth-child(4){transition-delay:.24s}
     @media(prefers-reduced-motion:reduce){.hero-anim,.reveal{animation:none;opacity:1;transform:none;transition:none}}
     @media(max-width:768px){section{padding:4rem 0}.for-grid,.steps,.cred-grid{grid-template-columns:1fr;gap:2rem}footer{flex-direction:column;align-items:flex-start}#final-cta h2{max-width:100%}}
-    @media(max-width:480px){.display{font-size:2.25rem}.btn{width:100%;text-align:center;padding:.9rem 1rem}.step p{max-width:100%}}
+    @media(max-width:480px){.display{font-size:2.25rem}.btn{width:100%;text-align:center;padding:.9rem 1rem}.step p{max-width:100%}.nav-btn{display:none}}
   </style>
 </head>
 <body>
   <nav id="main-nav">
     <div class="nav-logo">Logic<span>Engage</span></div>
-    <a href="#audit-offer" class="btn">Request an Audit</a>
+    <a href="#audit-offer" class="btn nav-btn">Request an Audit</a>
   </nav>
-
   <section id="hero">
-    <div class="container">
-      <div class="hero-inner">
-        <div class="eyebrow hero-anim">AI Automation Agency</div>
-        <h1 class="display hero-anim">Your team is skilled.<br>Your systems are <em>holding them back.</em></h1>
-        <p class="wide hero-anim">We design AI-powered workflows that eliminate the manual work slowing your business down. Not tools. Not templates. A system built around how you actually operate.</p>
-        <a href="#audit-offer" class="btn hero-anim">Request an Automation Audit</a>
-      </div>
-    </div>
+    <div class="container"><div class="hero-inner">
+      <div class="eyebrow hero-anim">AI Automation Agency</div>
+      <h1 class="display hero-anim">Your team is skilled.<br>Your systems are <em>holding them back.</em></h1>
+      <p class="wide hero-anim">We design AI-powered workflows that eliminate the manual work slowing your business down. Not tools. Not templates. A system built around how you actually operate.</p>
+      <a href="#audit-offer" class="btn hero-anim">Request an Automation Audit</a>
+    </div></div>
   </section>
-
   <section id="for-not-for">
     <div class="container">
       <div class="eyebrow reveal">Fit</div>
       <h2 class="reveal">Who this is for</h2>
       <div class="for-grid">
-        <div class="for-col reveal">
-          <h3>This is for</h3>
-          <ul>
-            <li>Businesses with real operations and repeatable processes</li>
-            <li>Teams spending hours on manual work that could be systematized</li>
-            <li>Founders who want clarity before committing to a direction</li>
-          </ul>
-        </div>
-        <div class="for-col not reveal">
-          <h3>This is not for</h3>
-          <ul>
-            <li>People looking for a magic button or instant fix</li>
-            <li>Hobby projects or early-stage experiments</li>
-            <li>Anyone expecting results without some upfront thinking</li>
-          </ul>
-        </div>
+        <div class="for-col reveal"><h3>This is for</h3><ul>
+          <li>Businesses with real operations and repeatable processes</li>
+          <li>Teams spending hours on manual work that could be systematized</li>
+          <li>Founders who want clarity before committing to a direction</li>
+        </ul></div>
+        <div class="for-col not reveal"><h3>This is not for</h3><ul>
+          <li>People looking for a magic button or instant fix</li>
+          <li>Hobby projects or early-stage experiments</li>
+          <li>Anyone expecting results without some upfront thinking</li>
+        </ul></div>
       </div>
     </div>
   </section>
-
   <section id="how-it-works">
     <div class="container">
       <div class="eyebrow reveal">Process</div>
       <h2 class="reveal">How it works</h2>
       <div class="steps">
-        <div class="step reveal">
-          <span class="step-num">01</span>
-          <p class="step-title">Understand the current system</p>
-          <p>We start by learning how your business actually runs, not how it's supposed to run.</p>
-        </div>
-        <div class="step reveal">
-          <span class="step-num">02</span>
-          <p class="step-title">Identify bottlenecks and waste</p>
-          <p>We map where time is lost, where handoffs break down, and where human effort goes to predictable tasks.</p>
-        </div>
-        <div class="step reveal">
-          <span class="step-num">03</span>
-          <p class="step-title">Design practical automations</p>
-          <p>We propose specific automations that fit your existing way of working. Nothing theoretical.</p>
-        </div>
-        <div class="step reveal">
-          <span class="step-num">04</span>
-          <p class="step-title">Decide together what makes sense</p>
-          <p>You choose what to move forward with. No pressure, no package upsell.</p>
-        </div>
+        <div class="step reveal"><span class="step-num">01</span><p class="step-title">Understand the current system</p><p>We start by learning how your business actually runs, not how it's supposed to run.</p></div>
+        <div class="step reveal"><span class="step-num">02</span><p class="step-title">Identify bottlenecks and waste</p><p>We map where time is lost, where handoffs break down, and where human effort goes to predictable tasks.</p></div>
+        <div class="step reveal"><span class="step-num">03</span><p class="step-title">Design practical automations</p><p>We propose specific automations that fit your existing way of working. Nothing theoretical.</p></div>
+        <div class="step reveal"><span class="step-num">04</span><p class="step-title">Decide together what makes sense</p><p>You choose what to move forward with. No pressure, no package upsell.</p></div>
       </div>
     </div>
   </section>
-
   <section id="credibility">
     <div class="container">
       <div class="eyebrow reveal">How we work</div>
       <div class="cred-grid">
-        <div class="cred-item reveal">
-          <h4>Custom-Built for Each Engagement</h4>
-          <p>No templates, no off-the-shelf packages. Every recommendation starts from how your business works.</p>
-        </div>
-        <div class="cred-item reveal">
-          <h4>Cross-Industry Experience</h4>
-          <p>We have worked across operations, professional services, and product businesses, finding automation opportunities that generalist consultants miss.</p>
-        </div>
+        <div class="cred-item reveal"><h4>Custom-Built for Each Engagement</h4><p>No templates, no off-the-shelf packages. Every recommendation starts from how your business works.</p></div>
+        <div class="cred-item reveal"><h4>Cross-Industry Experience</h4><p>We have worked across operations, professional services, and product businesses, finding automation opportunities that generalist consultants miss.</p></div>
       </div>
     </div>
   </section>
-
   <section id="audit-offer">
-    <div class="container">
-      <div class="audit-inner">
-        <div class="eyebrow reveal">The offer</div>
-        <h2 class="reveal">Free Automation Audit</h2>
-        <p class="reveal">We will review how your business currently operates, your workflows, handoffs, and repetitive tasks, and identify where automation could reduce friction or save time.</p>
-        <ul class="audit-takeaways reveal">
-          <li>A clear picture of where your operations are leaking time</li>
-          <li>Specific automation opportunities, ranked by impact</li>
-          <li>Honest advice on what makes sense to build vs. skip</li>
-        </ul>
-        <a href="mailto:hello@logicengage.com" class="btn reveal">Request an Automation Audit</a>
-        <p class="audit-note reveal">There is no obligation to work with us after the audit. The value is in the clarity.</p>
-      </div>
-    </div>
+    <div class="container"><div class="audit-inner">
+      <div class="eyebrow reveal">The offer</div>
+      <h2 class="reveal">Free Automation Audit</h2>
+      <p class="reveal">We will review how your business currently operates, your workflows, handoffs, and repetitive tasks, and identify where automation could reduce friction or save time.</p>
+      <ul class="audit-takeaways reveal">
+        <li>A clear picture of where your operations are leaking time</li>
+        <li>Specific automation opportunities, ranked by impact</li>
+        <li>Honest advice on what makes sense to build vs. skip</li>
+      </ul>
+      <a href="mailto:hello@logicengage.com" class="btn reveal">Request an Automation Audit</a>
+      <p class="audit-note reveal">There is no obligation to work with us after the audit. The value is in the clarity.</p>
+    </div></div>
   </section>
-
   <section id="what-happens-next">
     <div class="container">
       <div class="eyebrow reveal">After you reach out</div>
       <h2 class="reveal">What happens next</h2>
       <div class="next-steps">
-        <div class="next-step reveal">
-          <span class="next-num">01</span>
-          <div class="next-content">
-            <p class="step-title">You submit the form</p>
-            <p>Takes about two minutes. No long questionnaires.</p>
-          </div>
-        </div>
-        <div class="next-step reveal">
-          <span class="next-num">02</span>
-          <div class="next-content">
-            <p class="step-title">We schedule a short intro call</p>
-            <p>20 to 30 minutes. We listen first.</p>
-          </div>
-        </div>
-        <div class="next-step reveal">
-          <span class="next-num">03</span>
-          <div class="next-content">
-            <p class="step-title">We send you a written summary</p>
-            <p>What we found, what we would recommend, and why.</p>
-          </div>
-        </div>
-        <div class="next-step reveal">
-          <span class="next-num">04</span>
-          <div class="next-content">
-            <p class="step-title">You decide what to do next</p>
-            <p>Move forward, take the audit elsewhere, or simply wait. No pressure either way.</p>
-          </div>
-        </div>
+        <div class="next-step reveal"><span class="next-num">01</span><div class="next-content"><p class="step-title">You submit the form</p><p>Takes about two minutes. No long questionnaires.</p></div></div>
+        <div class="next-step reveal"><span class="next-num">02</span><div class="next-content"><p class="step-title">We schedule a short intro call</p><p>20 to 30 minutes. We listen first.</p></div></div>
+        <div class="next-step reveal"><span class="next-num">03</span><div class="next-content"><p class="step-title">We send you a written summary</p><p>What we found, what we would recommend, and why.</p></div></div>
+        <div class="next-step reveal"><span class="next-num">04</span><div class="next-content"><p class="step-title">You decide what to do next</p><p>Move forward, take the audit elsewhere, or simply wait. No pressure either way.</p></div></div>
       </div>
     </div>
   </section>
-
   <section id="final-cta">
     <div class="container">
       <div class="eyebrow reveal" style="justify-content:center">Ready?</div>
@@ -239,19 +174,15 @@
       <a href="mailto:hello@logicengage.com" class="btn reveal">Request an Automation Audit</a>
     </div>
   </section>
-
   <footer>
     <div class="footer-logo">Logic<span>Engage</span></div>
     <p>AI Automation for Real Businesses &middot; hello@logicengage.com</p>
   </footer>
-
   <script>
     const nav = document.getElementById('main-nav');
     window.addEventListener('scroll', () => { nav.classList.toggle('scrolled', window.scrollY > 30); }, { passive: true });
-    const obs = new IntersectionObserver((entries) => {
-      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); obs.unobserve(e.target); } });
-    }, { threshold: 0.08 });
+    const obs = new IntersectionObserver((e) => { e.forEach(x => { if (x.isIntersecting) { x.target.classList.add('in'); obs.unobserve(x.target); } }); }, { threshold: 0.08 });
     document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
   </script>
 </body>
-</html>
+                                                          </html>
