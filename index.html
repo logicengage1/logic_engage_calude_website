@@ -8,11 +8,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
   <style>
-    :root {
-      --bg-dark:#0a0a0a;--bg-mid:#111111;--bg-raised:#161616;--bg-accent-tint:#131210;
-      --text-primary:#e8e4de;--text-secondary:#8a8680;--text-dim:#4a4845;
-      --accent:#c8a97e;--accent-dim:#7a6549;--border:#1e1e1e;--border-light:#2a2a2a;
-    }
+    :root{--bg-dark:#0a0a0a;--bg-mid:#111111;--bg-accent-tint:#131210;--text-primary:#e8e4de;--text-secondary:#8a8680;--text-dim:#4a4845;--accent:#c8a97e;--accent-dim:#7a6549;--border:#1e1e1e;--border-light:#2a2a2a}
     *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
     html{scroll-behavior:smooth}
     body{background:var(--bg-dark);color:var(--text-primary);font-family:'Inter',system-ui,sans-serif;font-size:17px;line-height:1.7;font-weight:300;-webkit-font-smoothing:antialiased}
@@ -20,75 +16,81 @@
     .display{font-family:'DM Serif Display',Georgia,serif;font-size:clamp(2.6rem,6vw,5.2rem);line-height:1.1;letter-spacing:-0.02em;font-weight:400}
     .display em{font-style:italic;color:var(--accent)}
     h2{font-family:'DM Serif Display',Georgia,serif;font-size:clamp(1.8rem,3.5vw,2.8rem);line-height:1.2;font-weight:400;letter-spacing:-0.01em}
-    h3{font-size:1rem;font-weight:500;letter-spacing:0.08em;text-transform:uppercase;color:var(--accent)}
+    h3{font-size:.72rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);margin-bottom:1.25rem}
     p{color:var(--text-secondary);max-width:60ch}
-    p.wide{max-width:72ch}
+    p.wide{max-width:68ch}
     .container{max-width:1080px;margin:0 auto;padding:0 clamp(1.5rem,5vw,4rem)}
     section{padding:6rem 0}
     section+section{border-top:1px solid var(--border)}
-    .eyebrow{display:flex;align-items:center;gap:.75rem;margin-bottom:2rem;font-size:.75rem;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:var(--text-dim)}
-    .eyebrow::before{content:'';display:block;width:24px;height:1px;background:var(--accent-dim);flex-shrink:0}
-    .btn{display:inline-block;padding:.85rem 2.2rem;border:1px solid var(--accent-dim);color:var(--accent);font-size:.85rem;font-weight:500;letter-spacing:.08em;text-transform:uppercase;cursor:pointer;background:transparent;transition:border-color .25s,color .25s,background .25s}
-    .btn:hover{border-color:var(--accent);background:rgba(200,169,126,.06);color:var(--text-primary)}
-    nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:1.4rem clamp(1.5rem,5vw,4rem);display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid transparent;transition:border-color .3s,background .3s}
-    nav.scrolled{background:rgba(10,10,10,.92);backdrop-filter:blur(12px);border-bottom-color:var(--border)}
-    .nav-logo{font-family:'DM Serif Display',serif;font-size:1.15rem;letter-spacing:.02em}
+    .eyebrow{display:flex;align-items:center;gap:.75rem;margin-bottom:2rem;font-size:.68rem;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:var(--text-dim)}
+    .eyebrow::before{content:'';display:block;width:20px;height:1px;background:var(--accent-dim);flex-shrink:0}
+    .btn{display:inline-block;padding:.85rem 2.2rem;border:1px solid var(--accent-dim);color:var(--accent);font-family:'Inter',sans-serif;font-size:.78rem;font-weight:500;letter-spacing:.1em;text-transform:uppercase;cursor:pointer;background:transparent;transition:border-color .25s,color .25s,background .25s}
+    .btn:hover{border-color:var(--accent);background:rgba(200,169,126,.07);color:var(--text-primary)}
+    nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:1.25rem clamp(1.5rem,5vw,4rem);display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid transparent;transition:border-color .3s,background .3s}
+    nav.scrolled{background:rgba(10,10,10,.95);backdrop-filter:blur(12px);border-bottom-color:var(--border)}
+    .nav-logo{font-family:'DM Serif Display',serif;font-size:1.1rem;letter-spacing:.02em}
     .nav-logo span{color:var(--accent)}
-    #hero{min-height:100vh;display:flex;align-items:center;padding-top:8rem;padding-bottom:6rem}
+    #hero{min-height:100vh;display:flex;align-items:center;padding-top:7rem;padding-bottom:5rem}
     #hero .container{width:100%}
-    .hero-inner{max-width:780px}
-    .hero-inner .display{margin-bottom:1.8rem}
-    .hero-inner p{font-size:1.15rem;line-height:1.75;margin-bottom:3rem;max-width:58ch}
+    .hero-inner{max-width:760px}
+    .hero-inner .display{margin-bottom:1.75rem}
+    .hero-inner>p{font-size:1.12rem;line-height:1.8;margin-bottom:2.75rem;max-width:56ch}
     #for-not-for{background:var(--bg-mid)}
-    .for-grid{display:grid;grid-template-columns:1fr 1fr;gap:3rem;margin-top:3.5rem}
-    .for-col ul{list-style:none;display:flex;flex-direction:column;gap:1rem}
-    .for-col ul li{color:var(--text-secondary);padding-left:1.4rem;position:relative;font-size:.97rem;line-height:1.6}
-    .for-col ul li::before{content:'—';position:absolute;left:0;color:var(--text-dim)}
-    .for-col.not li::before{color:var(--border-light)}
-    .for-col.not li{color:var(--text-dim)}
-    .steps{display:grid;grid-template-columns:repeat(2,1fr);gap:2.5rem 4rem;margin-top:3.5rem}
-    .step{position:relative;padding-top:1.5rem}
-    .step::before{content:attr(data-n);position:absolute;top:0;left:0;font-family:'DM Serif Display',serif;font-size:.75rem;color:var(--accent-dim);letter-spacing:.1em}
-    .step-title{font-size:1rem;font-weight:500;color:var(--text-primary);margin-bottom:.6rem}
-    .step p{font-size:.95rem;line-height:1.65;max-width:34ch}
+    .for-grid{display:grid;grid-template-columns:1fr 1fr;gap:4rem;margin-top:3rem}
+    .for-col ul{list-style:none;display:flex;flex-direction:column;gap:.9rem}
+    .for-col ul li{color:var(--text-secondary);padding-left:1.25rem;position:relative;font-size:.96rem;line-height:1.6}
+    .for-col ul li::before{content:'--';position:absolute;left:0;color:var(--accent-dim)}
+    .for-col.not ul li{color:var(--text-dim)}
+    .for-col.not ul li::before{color:var(--border-light)}
+    .for-col.not h3{color:var(--text-dim)}
+    .steps{display:grid;grid-template-columns:1fr 1fr;gap:3rem 4rem;margin-top:3rem}
+    .step{position:relative;padding-top:2rem;border-top:1px solid var(--border)}
+    .step-num{font-family:'DM Serif Display',serif;font-size:.7rem;color:var(--accent-dim);letter-spacing:.1em;position:absolute;top:.6rem;left:0}
+    .step-title{font-size:1rem;font-weight:500;color:var(--text-primary);margin-bottom:.5rem}
+    .step p{font-size:.93rem;line-height:1.7;max-width:32ch}
     #credibility{background:var(--bg-mid)}
-    .cred-grid{display:grid;grid-template-columns:1fr 1fr;gap:3rem;margin-top:3.5rem;border-top:1px solid var(--border);padding-top:3rem}
-    .cred-item h4{font-family:'DM Serif Display',serif;font-size:1.3rem;font-weight:400;color:var(--text-primary);margin-bottom:.75rem;line-height:1.3}
-    .cred-item p{font-size:.93rem}
+    .cred-grid{display:grid;grid-template-columns:1fr 1fr;gap:3rem;margin-top:3rem;padding-top:3rem;border-top:1px solid var(--border)}
+    .cred-item h4{font-family:'DM Serif Display',serif;font-size:1.25rem;font-weight:400;color:var(--text-primary);margin-bottom:.65rem;line-height:1.3}
+    .cred-item p{font-size:.92rem}
     #audit-offer{background:var(--bg-accent-tint)}
-    .audit-inner{max-width:640px}
-    .audit-inner h2{margin:1.5rem 0}
-    .audit-inner p{margin-bottom:1rem}
-    .audit-takeaways{list-style:none;margin:2rem 0 2.5rem;display:flex;flex-direction:column;gap:.75rem}
-    .audit-takeaways li{color:var(--text-secondary);padding-left:1.4rem;position:relative;font-size:.95rem}
-    .audit-takeaways li::before{content:'✓';position:absolute;left:0;color:var(--accent);font-size:.8rem}
-    .audit-note{margin-top:2rem!important;font-style:italic;font-size:.9rem!important}
-    #what-happens-next{background:var(--bg-dark)}
-    .next-steps{display:flex;flex-direction:column;gap:0;margin-top:3.5rem;max-width:560px}
-    .next-step{display:grid;grid-template-columns:2rem 1fr;gap:0 1.5rem;padding:1.75rem 0;border-bottom:1px solid var(--border)}
+    .audit-inner{max-width:620px}
+    .audit-inner h2{margin:1.25rem 0}
+    .audit-inner>p{margin-bottom:.85rem}
+    .audit-takeaways{list-style:none;margin:1.75rem 0 2.25rem;display:flex;flex-direction:column;gap:.7rem}
+    .audit-takeaways li{color:var(--text-secondary);padding-left:1.4rem;position:relative;font-size:.94rem}
+    .audit-takeaways li::before{content:'v';position:absolute;left:0;color:var(--accent);font-size:.78rem;line-height:1.8}
+    .audit-note{margin-top:1.75rem!important;font-style:italic;font-size:.88rem!important;color:var(--text-dim)!important}
+    .next-steps{display:flex;flex-direction:column;margin-top:3rem;max-width:540px}
+    .next-step{display:grid;grid-template-columns:2.5rem 1fr;gap:0 1rem;padding:1.6rem 0;border-bottom:1px solid var(--border)}
     .next-step:first-child{border-top:1px solid var(--border)}
-    .next-num{font-family:'DM Serif Display',serif;font-size:.75rem;color:var(--accent-dim);padding-top:.15rem;letter-spacing:.05em}
-    .next-content .step-title{margin-bottom:.35rem;font-size:.97rem}
+    .next-num{font-family:'DM Serif Display',serif;font-size:.7rem;color:var(--accent-dim);padding-top:.2rem;letter-spacing:.05em}
+    .next-content .step-title{margin-bottom:.3rem;font-size:.96rem}
     .next-content p{font-size:.9rem;max-width:none}
     #final-cta{background:var(--bg-mid);text-align:center}
-    #final-cta h2{margin:1.5rem auto 1.2rem;max-width:16ch}
-    #final-cta p{max-width:44ch;margin:0 auto 2.5rem;font-style:italic}
-    footer{background:var(--bg-dark);border-top:1px solid var(--border);padding:2.5rem clamp(1.5rem,5vw,4rem);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem}
-    .footer-logo{font-family:'DM Serif Display',serif;font-size:1rem}
+    #final-cta .container{display:flex;flex-direction:column;align-items:center}
+    #final-cta h2{margin:1.25rem 0 1rem;max-width:14ch}
+    #final-cta>.container>p{max-width:42ch;font-style:italic;margin-bottom:2.25rem}
+    footer{background:var(--bg-dark);border-top:1px solid var(--border);padding:2.25rem clamp(1.5rem,5vw,4rem);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem}
+    .footer-logo{font-family:'DM Serif Display',serif;font-size:.95rem}
     .footer-logo span{color:var(--accent)}
-    footer p{font-size:.8rem;color:var(--text-dim);max-width:none}
-    .fade-up{opacity:0;transform:translateY(28px);transition:opacity .7s ease,transform .7s ease}
-    .fade-up.visible{opacity:1;transform:translateY(0)}
-    .fade-up:nth-child(2){transition-delay:.1s}
-    .fade-up:nth-child(3){transition-delay:.18s}
-    .fade-up:nth-child(4){transition-delay:.26s}
-    @media(prefers-reduced-motion:reduce){.fade-up{opacity:1;transform:none;transition:none}}
-    @media(max-width:768px){section{padding:4rem 0}.for-grid,.steps,.cred-grid{grid-template-columns:1fr}footer{flex-direction:column;align-items:flex-start}#final-cta h2{max-width:100%}}
-    @media(max-width:480px){.display{font-size:2.2rem}.btn{width:100%;text-align:center}.step p{max-width:100%}}
+    footer p{font-size:.78rem;color:var(--text-dim);max-width:none}
+    .hero-anim{opacity:0;transform:translateY(24px);animation:fadeUp .8s ease forwards}
+    .hero-anim:nth-child(1){animation-delay:.05s}
+    .hero-anim:nth-child(2){animation-delay:.18s}
+    .hero-anim:nth-child(3){animation-delay:.32s}
+    .hero-anim:nth-child(4){animation-delay:.46s}
+    @keyframes fadeUp{to{opacity:1;transform:translateY(0)}}
+    .reveal{opacity:0;transform:translateY(20px);transition:opacity .65s ease,transform .65s ease}
+    .reveal.in{opacity:1;transform:none}
+    .reveal:nth-child(2){transition-delay:.08s}
+    .reveal:nth-child(3){transition-delay:.16s}
+    .reveal:nth-child(4){transition-delay:.24s}
+    @media(prefers-reduced-motion:reduce){.hero-anim,.reveal{animation:none;opacity:1;transform:none;transition:none}}
+    @media(max-width:768px){section{padding:4rem 0}.for-grid,.steps,.cred-grid{grid-template-columns:1fr;gap:2rem}footer{flex-direction:column;align-items:flex-start}#final-cta h2{max-width:100%}}
+    @media(max-width:480px){.display{font-size:2.25rem}.btn{width:100%;text-align:center;padding:.9rem 1rem}.step p{max-width:100%}}
   </style>
 </head>
 <body>
-
   <nav id="main-nav">
     <div class="nav-logo">Logic<span>Engage</span></div>
     <a href="#audit-offer" class="btn">Request an Audit</a>
@@ -97,27 +99,20 @@
   <section id="hero">
     <div class="container">
       <div class="hero-inner">
-        <div class="eyebrow fade-up">AI Automation Agency</div>
-        <h1 class="display fade-up">
-          Your team is skilled.<br>
-          Your systems are <em>holding them back.</em>
-        </h1>
-        <p class="fade-up wide">
-          We design AI-powered workflows that eliminate the manual work slowing
-          your business down. Not tools. Not templates.
-          A system built around how you actually operate.
-        </p>
-        <a href="#audit-offer" class="btn fade-up">Request an Automation Audit</a>
+        <div class="eyebrow hero-anim">AI Automation Agency</div>
+        <h1 class="display hero-anim">Your team is skilled.<br>Your systems are <em>holding them back.</em></h1>
+        <p class="wide hero-anim">We design AI-powered workflows that eliminate the manual work slowing your business down. Not tools. Not templates. A system built around how you actually operate.</p>
+        <a href="#audit-offer" class="btn hero-anim">Request an Automation Audit</a>
       </div>
     </div>
   </section>
 
   <section id="for-not-for">
     <div class="container">
-      <div class="eyebrow fade-up">Fit</div>
-      <h2 class="fade-up">Who this is for</h2>
+      <div class="eyebrow reveal">Fit</div>
+      <h2 class="reveal">Who this is for</h2>
       <div class="for-grid">
-        <div class="for-col fade-up">
+        <div class="for-col reveal">
           <h3>This is for</h3>
           <ul>
             <li>Businesses with real operations and repeatable processes</li>
@@ -125,8 +120,8 @@
             <li>Founders who want clarity before committing to a direction</li>
           </ul>
         </div>
-        <div class="for-col not fade-up">
-          <h3 style="color:var(--text-dim)">This is not for</h3>
+        <div class="for-col not reveal">
+          <h3>This is not for</h3>
           <ul>
             <li>People looking for a magic button or instant fix</li>
             <li>Hobby projects or early-stage experiments</li>
@@ -139,22 +134,26 @@
 
   <section id="how-it-works">
     <div class="container">
-      <div class="eyebrow fade-up">Process</div>
-      <h2 class="fade-up">How it works</h2>
+      <div class="eyebrow reveal">Process</div>
+      <h2 class="reveal">How it works</h2>
       <div class="steps">
-        <div class="step fade-up" data-n="01">
+        <div class="step reveal">
+          <span class="step-num">01</span>
           <p class="step-title">Understand the current system</p>
           <p>We start by learning how your business actually runs, not how it's supposed to run.</p>
         </div>
-        <div class="step fade-up" data-n="02">
+        <div class="step reveal">
+          <span class="step-num">02</span>
           <p class="step-title">Identify bottlenecks and waste</p>
-          <p>We map where time is lost, where handoffs break down, and where human effort is going to predictable tasks.</p>
+          <p>We map where time is lost, where handoffs break down, and where human effort goes to predictable tasks.</p>
         </div>
-        <div class="step fade-up" data-n="03">
+        <div class="step reveal">
+          <span class="step-num">03</span>
           <p class="step-title">Design practical automations</p>
           <p>We propose specific automations that fit your existing way of working. Nothing theoretical.</p>
         </div>
-        <div class="step fade-up" data-n="04">
+        <div class="step reveal">
+          <span class="step-num">04</span>
           <p class="step-title">Decide together what makes sense</p>
           <p>You choose what to move forward with. No pressure, no package upsell.</p>
         </div>
@@ -164,15 +163,15 @@
 
   <section id="credibility">
     <div class="container">
-      <div class="eyebrow fade-up">How we work</div>
+      <div class="eyebrow reveal">How we work</div>
       <div class="cred-grid">
-        <div class="cred-item fade-up">
+        <div class="cred-item reveal">
           <h4>Custom-Built for Each Engagement</h4>
           <p>No templates, no off-the-shelf packages. Every recommendation starts from how your business works.</p>
         </div>
-        <div class="cred-item fade-up">
+        <div class="cred-item reveal">
           <h4>Cross-Industry Experience</h4>
-          <p>We have worked across operations, professional services, and product businesses — finding automation opportunities that generalist consultants miss.</p>
+          <p>We have worked across operations, professional services, and product businesses, finding automation opportunities that generalist consultants miss.</p>
         </div>
       </div>
     </div>
@@ -181,54 +180,47 @@
   <section id="audit-offer">
     <div class="container">
       <div class="audit-inner">
-        <div class="eyebrow fade-up">The offer</div>
-        <h2 class="fade-up">Free Automation Audit</h2>
-        <p class="fade-up">
-          We will review how your business currently operates — your workflows,
-          handoffs, and repetitive tasks — and identify where automation could
-          reduce friction or save time.
-        </p>
-        <ul class="audit-takeaways fade-up">
+        <div class="eyebrow reveal">The offer</div>
+        <h2 class="reveal">Free Automation Audit</h2>
+        <p class="reveal">We will review how your business currently operates, your workflows, handoffs, and repetitive tasks, and identify where automation could reduce friction or save time.</p>
+        <ul class="audit-takeaways reveal">
           <li>A clear picture of where your operations are leaking time</li>
           <li>Specific automation opportunities, ranked by impact</li>
           <li>Honest advice on what makes sense to build vs. skip</li>
         </ul>
-        <a href="mailto:hello@logicengage.com" class="btn fade-up">Request an Automation Audit</a>
-        <p class="audit-note fade-up">
-          There is no obligation to work with us after the audit.
-          The value is in the clarity.
-        </p>
+        <a href="mailto:hello@logicengage.com" class="btn reveal">Request an Automation Audit</a>
+        <p class="audit-note reveal">There is no obligation to work with us after the audit. The value is in the clarity.</p>
       </div>
     </div>
   </section>
 
   <section id="what-happens-next">
     <div class="container">
-      <div class="eyebrow fade-up">After you reach out</div>
-      <h2 class="fade-up">What happens next</h2>
+      <div class="eyebrow reveal">After you reach out</div>
+      <h2 class="reveal">What happens next</h2>
       <div class="next-steps">
-        <div class="next-step fade-up">
+        <div class="next-step reveal">
           <span class="next-num">01</span>
           <div class="next-content">
             <p class="step-title">You submit the form</p>
             <p>Takes about two minutes. No long questionnaires.</p>
           </div>
         </div>
-        <div class="next-step fade-up">
+        <div class="next-step reveal">
           <span class="next-num">02</span>
           <div class="next-content">
             <p class="step-title">We schedule a short intro call</p>
             <p>20 to 30 minutes. We listen first.</p>
           </div>
         </div>
-        <div class="next-step fade-up">
+        <div class="next-step reveal">
           <span class="next-num">03</span>
           <div class="next-content">
             <p class="step-title">We send you a written summary</p>
             <p>What we found, what we would recommend, and why.</p>
           </div>
         </div>
-        <div class="next-step fade-up">
+        <div class="next-step reveal">
           <span class="next-num">04</span>
           <div class="next-content">
             <p class="step-title">You decide what to do next</p>
@@ -241,32 +233,25 @@
 
   <section id="final-cta">
     <div class="container">
-      <div class="eyebrow fade-up" style="justify-content:center">Ready?</div>
-      <h2 class="fade-up">Ready to see where your time is going?</h2>
-      <p class="fade-up">The audit is free. The conversation is short. The clarity is yours to keep.</p>
-      <a href="mailto:hello@logicengage.com" class="btn fade-up">Request an Automation Audit</a>
+      <div class="eyebrow reveal" style="justify-content:center">Ready?</div>
+      <h2 class="reveal">Ready to see where your time is going?</h2>
+      <p class="reveal">The audit is free. The conversation is short. The clarity is yours to keep.</p>
+      <a href="mailto:hello@logicengage.com" class="btn reveal">Request an Automation Audit</a>
     </div>
   </section>
 
   <footer>
     <div class="footer-logo">Logic<span>Engage</span></div>
-    <p>AI Automation for Real Businesses &nbsp;&middot;&nbsp; hello@logicengage.com</p>
+    <p>AI Automation for Real Businesses &middot; hello@logicengage.com</p>
   </footer>
 
   <script>
     const nav = document.getElementById('main-nav');
-    window.addEventListener('scroll', () => {
-      nav.classList.toggle('scrolled', window.scrollY > 40);
-    }, { passive: true });
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-          observer.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
-    document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+    window.addEventListener('scroll', () => { nav.classList.toggle('scrolled', window.scrollY > 30); }, { passive: true });
+    const obs = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); obs.unobserve(e.target); } });
+    }, { threshold: 0.08 });
+    document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
   </script>
 </body>
 </html>
